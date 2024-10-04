@@ -45,7 +45,7 @@ describe("toHaveClass matcher", () => {
     };
     const result = toHaveClass(domElement, "toggled");
     expect(stripTerminalColor(result.message())).toContain(
-      `Actual class: "toggled"`
+      `Actual classes: "toggled"`
     );
   });
 });

@@ -8,7 +8,7 @@ export const toHaveClass = (received, expectedText) => {
     });
 
   const actualTextHint = () =>
-    "Actual class: " + printReceived(received.className);
+    "Actual classes: " + printReceived(received.className);
   const message = () => [sourceHint(), actualTextHint()].join("\n\n");
   return { pass, message };
 };
