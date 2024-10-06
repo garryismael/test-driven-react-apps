@@ -3,11 +3,9 @@ import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 
 export default [
-  { files: ["**/*.{js,mjs,cjs,jsx}"] },
-  { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  pluginReact.configs.flat.recommended,
   {
+    files: ["**/*.{js,mjs,cjs,jsx}"],
+    languageOptions: { globals: globals.browser },
     plugins: ["jest"],
     env: { "jest/globals": true },
     rules: {
@@ -18,4 +16,6 @@ export default [
       "jest/valid-expect": "error",
     },
   },
+  pluginJs.configs.recommended,
+  pluginReact.configs.flat.recommended,
 ];
