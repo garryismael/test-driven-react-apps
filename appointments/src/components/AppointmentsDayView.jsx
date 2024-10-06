@@ -2,6 +2,7 @@ import React from "react";
 import { appointmentTimeOfDay } from "@/utils";
 import { Appointment } from "./Appointment";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const AppointmentsDayView = ({ appointments }) => {
   const [selectedAppointment, setSelectedAppointment] = useState(0);
@@ -28,3 +29,7 @@ export const AppointmentsDayView = ({ appointments }) => {
     </div>
   );
 };
+
+AppointmentsDayView.propTypes = {
+  appointments: PropTypes.array
+}

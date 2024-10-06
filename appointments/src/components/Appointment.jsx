@@ -1,4 +1,5 @@
 import { appointmentTimeOfDay } from "@/utils";
+import PropTypes from "prop-types";
 import React from "react";
 
 export const Appointment = ({
@@ -38,3 +39,11 @@ export const Appointment = ({
     </table>
   </div>
 );
+
+Appointment.propTypes = {
+  customer: PropTypes.object,
+  stylist: PropTypes.string,
+  service: PropTypes.string,
+  notes: PropTypes.string,
+  startsAt: PropTypes.number,
+};
